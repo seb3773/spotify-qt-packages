@@ -70,7 +70,7 @@ initial_volume = "100"
 
 To avoid this file containing plaintext password to be read by anyone, let's set permissions:
 ```
-sudo chmod 640 /etc//spotifyd.conf
+sudo chmod 640 /etc/spotifyd.conf
 ```
 
 just to be sure, copy this file to  ~/.config/spotifyd/ :
