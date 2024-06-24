@@ -18,7 +18,7 @@ Spotifyd also supports the Spotify Connect protocol, which makes it show up as a
 https://github.com/Spotifyd/spotifyd  
 +-------------------------------------------------  
 
-I build these packages because they are not in debian 12 repository; and I don't want to use snap. Besides, there is only a 64bits Appimage (which I prefer over snap) version of spotifyqt.  
+I builded these packages because they are not in debian 12 repository; and I don't want to use snap. Besides, there is only a 64bits Appimage (which I prefer over snap) version of spotifyqt.  
 
 x64,i386 & armhf packages provided.  
   
