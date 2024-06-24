@@ -34,7 +34,7 @@ sudo apt install ./spotify-qt-v3.11_i386.deb
   
 
 # spotify-qt configuration:  
-At first start it will ask you for your "Client ID" and "Client Secret"; to obtain these keys do this:
+At first start it will ask you for your "Client ID" and "Client Secret"; to obtain these keys do this:  
 open https://developer.spotify.com/dashboard/  
 create a new application  
 goto edit settings in the app overview  
