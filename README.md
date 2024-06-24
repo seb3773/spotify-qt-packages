@@ -42,7 +42,7 @@ add http://localhost:8888 in Redirect URIs section
   
 Then grab your client ID and client Secret and you will be able to loggin :)  
   
-Then go to settings:
+Then go to settings:  
 settings >> spotify >> general : librespot or spotifyd path : /bin/spotifyd  
 settings >> spotify >> general : check 'start with app' & 'always start'  
 settings >> spotify >> configuration : additional arguments: -b pulseaudio
