@@ -1,0 +1,33 @@
+# spotify-qt-spotifyd-packages
+
+Debian bookworm packages for spotify-qt & spotifyd  
++-------------------------------------------------  
+++spotify-qt:  
+An unofficial Spotify client using Qt as a simpler, lighter alternative to the official client. Please note that you need an actual Spotify client running, for example librespot, which can be configured from within the app.
+Note: Controlling playback requires Spotify Premium.  
+Goals:  
+Fast, light on resources, and small file size.  
+Portable, and supporting as many platforms and architectures as possible.  
+Customizable.  
+https://github.com/kraxarn/spotify-qt  
++-------------------------------------------------  
+++spotifyd:
+An open source Spotify client running as a UNIX daemon.  
+Spotifyd streams music just like the official client, but is more lightweight and supports more platforms.  
+Spotifyd also supports the Spotify Connect protocol, which makes it show up as a device that can be controlled from the official clients.  
+https://github.com/Spotifyd/spotifyd  
++-------------------------------------------------  
+
+I build these packages because they are not in debian 12 repository; and I don't want to use snap. Besides, there is only a 64bits Appimage (which I prefer over snap) version of spotifyqt.  
+
+x64,i386 & armhf packages provided.  
+  
+-installation:  
+  
+download appropriate packages, and do (for example for 32bits packages):  
+  
+sudo apt install ./spotifyd-0.3.5_i386.deb  
+sudo apt install ./spotify-qt-v3.11_i386.deb
+(or install with graphical .deb installer if you have one, for example QSI installer for q4os: left click the .deb, then 'open with' and choose QSI installer)  
+
+
