@@ -78,10 +78,10 @@ To avoid this file containing plaintext password to be read by anyone, let's set
 sudo chmod 640 /etc/spotifyd.conf
 ```
 
-just to be sure, copy this file to  ~/.config/spotifyd/ :
+just to be sure, let's create a symlink of this file to  ~/.config/spotifyd/ :
 ```
 ~/.config/spotifyd/
-sudo cp /etc/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+sudo ln -s /etc/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 ```
 
 (this is because spotify-qt seems to check the ~/.config/spotifyd/ folder; but spotifyd is checking /etc/ folder for his config file...)
