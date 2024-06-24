@@ -29,5 +29,9 @@ download appropriate packages, and do (for example for 32bits packages):
 sudo apt install ./spotifyd-0.3.5_i386.deb  
 sudo apt install ./spotify-qt-v3.11_i386.deb
 (or install with graphical .deb installer if you have one, for example QSI installer for q4os: left click the .deb, then 'open with' and choose QSI installer)  
+  
+-spotifyd config file:  
+I suggest you to create a config file for spotifyd with the options you want. This way, you can for example set your password in the file to avoid spotify-qt to ask you for it when it starts the spotifyd daemon.  
+This is not necessary, but if this file doesn't exist, default options for spotifyd will be used, which is maybe not what you want; for example, I prefer to use pulseaudio backend.
 
 
