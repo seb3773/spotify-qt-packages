@@ -43,14 +43,14 @@ add http://localhost:8888 in Redirect URIs section
 Then grab your client ID and client Secret and you will be able to loggin :)  
   
 Then go to settings:  
+settings >> interface >> titlebar : uncheck 'Application titlebar'  
+(it'a a matter of taste, but I prefer if the app use the default windows decorations of my os)  
 settings >> spotify >> general : librespot or spotifyd path : /bin/spotifyd  
 settings >> spotify >> general : check 'start with app' & 'always start'  
 settings >> spotify >> configuration : additional arguments: -b pulseaudio  
 (I recommend pulseaudio, but you can use alsa too)  
   
-settings >> interface >> titlebar : uncheck 'Application titlebar'  
-(it'a a matter of taste, but I prefer if the app use the default windows decorations of my os)  
-  
+Of course, you'll have to put your username in settings >> spotify >> configuration, or alternatively, you can use a config file for spotifyd:  
   
 # spotifyd config file:  
 I suggest you to create a config file for spotifyd with the options you want. This way, you can for example set your password in the file to avoid spotify-qt to ask you for it when it starts the spotifyd daemon.  
