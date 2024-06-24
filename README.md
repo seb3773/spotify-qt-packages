@@ -45,12 +45,12 @@ Then grab your client ID and client Secret and you will be able to loggin :)
 Then go to settings:  
 settings >> spotify >> general : librespot or spotifyd path : /bin/spotifyd  
 settings >> spotify >> general : check 'start with app' & 'always start'  
-settings >> spotify >> configuration : additional arguments: -b pulseaudio
+settings >> spotify >> configuration : additional arguments: -b pulseaudio  
 (I recommend pulseaudio, but you can use alsa too)  
   
-settings >> interface >> titlebar : uncheck 'Application titlebar'
-(it'a a matter of taste, but I prefer if the app use the default windows decorations of my os)
-
+settings >> interface >> titlebar : uncheck 'Application titlebar'  
+(it'a a matter of taste, but I prefer if the app use the default windows decorations of my os)  
+  
   
 # spotifyd config file:  
 I suggest you to create a config file for spotifyd with the options you want. This way, you can for example set your password in the file to avoid spotify-qt to ask you for it when it starts the spotifyd daemon.  
@@ -88,20 +88,18 @@ bitrate = 320
 initial_volume = "100"
 ```
 
-To avoid this file containing plaintext password to be read by anyone, let's set permissions:
+To avoid this file containing plaintext password to be read by anyone, let's set permissions:  
 ```
 sudo chmod 640 /etc/spotifyd.conf
 ```
 
-just to be sure, let's create a symlink of this file to  ~/.config/spotifyd/ :
+just to be sure, let's create a symlink of this file to  ~/.config/spotifyd/ :  
 ```
 ~/.config/spotifyd/
 sudo ln -s /etc/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 ```
-
 (this is because spotify-qt seems to check the ~/.config/spotifyd/ folder; but spotifyd is checking /etc/ folder for his config file...)
-
-
+  
 Then, in spotify-qt:  
 settings >> spotify >> configuration : check 'use global config'  
 
