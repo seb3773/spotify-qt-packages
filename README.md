@@ -34,9 +34,24 @@ sudo apt install ./spotify-qt-v3.11_i386.deb
   
 
 # spotify-qt configuration:  
+At first start it will ask you for your "Client ID" and "Client Secret"; to obtain these keys do this:
+open https://developer.spotify.com/dashboard/  
+create a new application  
+goto edit settings in the app overview  
+add http://localhost:8888 in Redirect URIs section  
+  
+Then grab your client ID and client Secret and you will be able to loggin :)  
+  
+Then go to settings:
+settings >> spotify >> general : librespot or spotifyd path : /bin/spotifyd  
+settings >> spotify >> general : check 'start with app' & 'always start'  
+settings >> spotify >> configuration : additional arguments: -b pulseaudio
+(I recommend pulseaudio, but you can use alsa too)  
+  
+settings >> interface >> titlebar : uncheck 'Application titlebar'
+(it'a a matter of taste, but I prefer if the app use the default windows decorations of my os)
 
-
-
+  
 # spotifyd config file:  
 I suggest you to create a config file for spotifyd with the options you want. This way, you can for example set your password in the file to avoid spotify-qt to ask you for it when it starts the spotifyd daemon.  
 This is not necessary, but if this file doesn't exist, default options for spotifyd will be used, which is maybe not what you want; for example, I prefer to use pulseaudio backend.  
@@ -88,7 +103,6 @@ sudo ln -s /etc/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 
 
 Then, in spotify-qt:  
-settings >> spotify >> general : check 'start with app' & 'always start'  
 settings >> spotify >> configuration : check 'use global config'  
 
 
