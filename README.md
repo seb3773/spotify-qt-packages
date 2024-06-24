@@ -26,8 +26,10 @@ x64,i386 & armhf packages provided.
   
 download appropriate packages, and do (for example for 32bits packages):  
   
-sudo apt install ./spotifyd-0.3.5_i386.deb  
+```
+sudo apt install ./spotifyd-0.3.5_i386.deb
 sudo apt install ./spotify-qt-v3.11_i386.deb
+```
 (or install with graphical .deb installer if you have one, for example QSI installer for q4os: left click the .deb, then 'open with' and choose QSI installer)  
   
 -spotifyd config file:  
@@ -35,12 +37,14 @@ I suggest you to create a config file for spotifyd with the options you want. Th
 This is not necessary, but if this file doesn't exist, default options for spotifyd will be used, which is maybe not what you want; for example, I prefer to use pulseaudio backend.  
 To create this file do like this:  
   
-sudo nano /etc/spotifyd.conf  
+```
+sudo nano /etc/spotifyd.conf
+```
   
 and paste theses lines as a start (configure it with your parameters):  
   
   
-
+```
 [global]
 # This is your spotify account name. Not your email
 username = "YOUR_USERNAME"
@@ -62,8 +66,24 @@ bitrate = 320
 
 # Set the inital volume of spotify to 100
 initial_volume = "100"
+```
+
+To avoid this file containing plaintext password to be read by anyone, let's set permissions:
+```
+sudo chmod 640 /etc//spotifyd.conf
+```
+
+just to be sure, copy this file to  ~/.config/spotifyd/ :
+```
+sudo cp /etc/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+```
+
+(this is because spotify-qt seems to check the ~/.config/spotifyd/ folder; but spotifyd is checking /etc/ folder for his config file...)
 
 
+Then, in spotify-qt:  
+settings >> spotify >> general : check 'start with app' & 'always start'  
+settings >> spotify >> configuration : check 'use global config'  
 
 
 
